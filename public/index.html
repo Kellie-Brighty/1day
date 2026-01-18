@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1-Day Reset | Dan Koe Protocol</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #sketchy-filter {
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      id="sketchy-filter"
+      xmlns="http://www.w3.org/2000/svg"
+      style="display: none"
+    >
+      <filter id="hand-drawn">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.005"
+          numOctaves="1"
+          seed="1"
+        >
+          <animate
+            attributeName="seed"
+            values="1;2;1"
+            dur="0.4s"
+            repeatCount="indefinite"
+          />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="3" />
+      </filter>
+      <filter id="sketchy-bg">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.02"
+          numOctaves="1"
+          seed="5"
+        >
+          <animate
+            attributeName="seed"
+            values="5;6;5"
+            dur="0.8s"
+            repeatCount="indefinite"
+          />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="6" />
+      </filter>
+    </svg>
+    <div class="grain-overlay"></div>
+    <div class="custom-cursor"></div>
+
+    <header class="hero">
+      <div class="hero-image-container">
+        <img
+          src="hero.png"
+          alt="Woodcut illustration of a person falling into a vortex"
+          class="hero-img"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="reveal-text">
+          FIX YOUR ENTIRE LIFE IN <span class="highlight">1 DAY</span>
+        </h1>
+        <p class="subtitle reveal-text">
+          A 10-minute distillation of the Dan Koe protocol.
+        </p>
+        <div class="hero-socials">
+          <a
+            href="https://t.me/Ucanfixlifein1day"
+            target="_blank"
+            class="social-icon"
+            aria-label="Telegram"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.36-.48.99-.74 3.84-1.67 6.42-2.77 7.74-3.3 3.68-1.5 4.44-1.76 4.93-1.77.11 0 .35.03.51.16.14.12.18.28.19.39.01.07.01.21 0 .33z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://x.com/1onethereum"
+            target="_blank"
+            class="social-icon"
+            aria-label="X (Twitter)"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="scroll-indicator">
+          <span>SCROLL TO BEGIN</span>
+          <div class="line"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="ca-bar">
+      <div class="ca-container">
+        <span class="ca-label">CA:</span>
+        <span class="ca-address" id="ca-address">0x468c88AE9Ac85fd353d1000B306A8Df3717360cb</span>
+        <button class="ca-copy-btn" id="copy-btn">COPY</button>
+      </div>
+    </div>
+
+    <main>
+      <section id="identity" class="content-section">
+        <div class="container">
+          <div class="section-number">01</div>
+          <h2 class="reveal-text">Shift Identity First</h2>
+          <div class="content-grid">
+            <div class="text-block reveal-text">
+              <p>
+                Resolutions fail because they target superficial behaviors. To
+                change your life, you must first change who you are at the core.
+              </p>
+              <p class="quote">
+                "Become 'the disciplined CEO' and the actions follow naturally."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="goals" class="content-section inverse">
+        <div class="container">
+          <div class="section-number">02</div>
+          <h2 class="reveal-text">Reveal Hidden Goals</h2>
+          <div class="content-grid">
+            <div class="text-block reveal-text">
+              <p>
+                Procrastination is often a defense mechanism for your ego. Your
+                actions reveal what you actually want, not what you say you
+                want.
+              </p>
+              <p>
+                Break the cycle by questioning your autopilot habits. What are
+                you truly avoiding?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="protocol" class="content-section">
+        <div class="container">
+          <div class="section-number">03</div>
+          <h2 class="reveal-text">1-Day Reset Protocol</h2>
+
+          <div class="protocol-grid">
+            <div class="protocol-card reveal-card">
+              <h3>MORNING</h3>
+              <ul>
+                <li>Write your "anti-vision" (the 10-year nightmare).</li>
+                <li>Define a simple vision.</li>
+                <li>Draft your identity statement.</li>
+              </ul>
+            </div>
+            <div class="protocol-card reveal-card">
+              <h3>DAY</h3>
+              <ul>
+                <li>Use pattern interrupts.</li>
+                <li>Ask: "What am I avoiding right now?"</li>
+                <li>Stay conscious of autopilot loops.</li>
+              </ul>
+            </div>
+            <div class="protocol-card reveal-card">
+              <h3>NIGHT</h3>
+              <ul>
+                <li>Identify current blockers.</li>
+                <li>Compress visions into single sentences.</li>
+                <li>Set a 1-year goal & 1-month project.</li>
+                <li>Identify your daily levers.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gamify" class="content-section inverse">
+        <div class="container">
+          <div class="section-number">04</div>
+          <h2 class="reveal-text">Gamify Your Existence</h2>
+          <div class="content-grid">
+            <div class="text-block reveal-text">
+              <p>
+                Treat your vision as the win condition. Your anti-vision
+                represents the stakes. Every goal is a mission, every habit is a
+                quest.
+              </p>
+              <div class="btn-wrap">
+                <a
+                  href="https://x.com/thedankoe/status/2010751592346030461?s=46"
+                  target="_blank"
+                  class="x-link"
+                  >REFERENCE ON X</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 The Dan Koe Protocol | Distilled for clarity.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
